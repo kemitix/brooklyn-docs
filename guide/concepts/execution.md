@@ -15,7 +15,9 @@ created by a task associated with a different entity.
 The execution of a typical overall start-up sequence is shown below (click image to magnify):
 
 [![Brooklyn Flow Diagram](brooklyn-flow-websequencediagrams.com-w400.png "Brooklyn Flow Diagram" )](brooklyn-flow-websequencediagrams.com.png)
-
+<!-- TODO add source text for image to source control -->
+<!-- TODO add missing line from TomcatNode2 to TomcatNode2* with label 'create VM' -->
+<!-- TODO clarify that TomcatNode1 and TomcatNode2 are Tasks, while TomcatNode1* and TomcatNode2* are VMs -->
 
 ## Integration
 

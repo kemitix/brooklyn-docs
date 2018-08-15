@@ -40,18 +40,21 @@ This could be desired behaviour if the entity had previously been entirely stopp
 
 
 ### stop(boolean stopMachine)
+<!-- TODO deprecate in favour of stopMachine() and stopProcess() methods -->
 If `stopMachine==true`, this effector will stop the software process and then terminate the VM (if a VM had been created as part of `start()`). This behaviour is the inverse of the first `start()` effector call.
 When stopping the software process, it does not uninstall the software packages / files.
 
 If `stopMachine==false`, this effector will stop just the software process (leaving the VM and all configuration files / install artifacts in place).
 
 ### restart(boolean restartMachine, boolean restartChildren)
+<!-- TODO deprecate in favour of restartMachine(), restartProcess() methods -->
 This will restart the software process.
 
 If `restartMachine==true`, it will also terminate the VM and create a new VM. It will then install+customize+launch the software process on the new VM. It is equivalent of invoking `stop(true)` and then `start(Collections.EMPTY_LIST)`.
 If `restartMachine==false`, it will first attempt to stop the software process (which should be a no-op if the process is not running), and will then start the software process (without going through the **install+customize** steps).
 
 If `restartChildren==true`, then after restarting itself it will call `restart(restartMachine, restartChildren)` on each child-entity concurrently.
+<!-- TODO clarify what happens, or doesn't, when restartChildred==false -->
 
 ## Recommended operations
 
